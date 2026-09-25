@@ -1,0 +1,33 @@
+.portrait {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  max-width: 360px;
+  margin-right: 1.5rem;
+  isolation: isolate;
+}
+
+.portrait::before {
+  content: "";
+  position: absolute;
+  inset: 1.25rem -1.25rem -1.25rem 1.25rem;
+  border: 1px solid var(--gold-soft);
+  z-index: -1;
+}
+
+.photo {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.role {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-style: italic;
+  color: var(--gold-soft);
+}
+
+.more {
+  color: var(--gold-soft);
+}

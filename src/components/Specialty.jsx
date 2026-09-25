@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Specialty.module.css";
 import { AREAS_PRACTICA, WHATSAPP_LINK } from "@/constants/constants";
 
@@ -46,7 +47,7 @@ export default function Specialty() {
               ))}
             </ul>
 
-            <div className="d-flex flex-wrap gap-3 mt-4">
+            <div className="d-flex flex-wrap align-items-center gap-4 mt-4">
               <a
                 className="btn btn-ink"
                 href={WHATSAPP_LINK}
@@ -55,6 +56,10 @@ export default function Specialty() {
               >
                 Consulta tu caso laboral
               </a>
+              <Link className="link-arrow" href="/socio-fundador">
+                Conoce al abogado responsable{" "}
+                <i className="fa-solid fa-arrow-right" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </div>

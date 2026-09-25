@@ -15,10 +15,10 @@ export const SEO_DESCRIPCION_DESPACHO =
 // Contacto
 // TODO: confirmar estos datos. Provienen del sitio anterior.
 // ─────────────────────────────────────────────────────────────
-export const TELEFONO_DESPACHO = "4770000111";
-export const TELEFONO_VISIBLE = "4770000111";
-export const WHATSAPP_DESPACHO = "4770000111";
-export const CORREO_DESPACHO = "contacto@cjplotinus.com"; // TODO: correo de Plotinus
+export const TELEFONO_DESPACHO = "4776935031";
+export const TELEFONO_VISIBLE = "477 693 5031";
+export const WHATSAPP_DESPACHO = "4776935031";
+export const CORREO_DESPACHO = "consultoriacaballero@outlook.com"; // TODO: correo de Plotinus
 export const DIRECCION_DESPACHO =
   "Av. Paseo del Moral 707-563, Villas del Moral, 37160 León, Gto."; // TODO
 export const DIRECCION_IFRAME_MAPS =
@@ -37,8 +37,8 @@ export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=52${WHATSAPP_D
 export const TELEFONO_LINK = `tel:+52${TELEFONO_DESPACHO}`;
 
 export const HORARIO = [
-  { dias: "Lunes a viernes", horas: "9:00 – 17:00" },
-  { dias: "Sábado", horas: "Solo con cita" },
+  { dias: "Lunes a viernes", horas: "9:00 – 19:00" },
+  { dias: "Sábado", horas: "9:00 – 14:00" },
   { dias: "Domingo", horas: "Cerrado" },
 ];
 
@@ -130,3 +130,65 @@ export const PROCESO = [
 export const AUTOR_CITA_CELEBRE_PRINCIPAL = "Francesco Carnelutti";
 export const CITA_CELEBRE_PRINCIPAL =
   "Como la belleza de una música, la bondad de una ley no depende de quien la compone, sino de quien la ejecuta.";
+
+// ─────────────────────────────────────────────────────────────
+// Socio fundador
+// ─────────────────────────────────────────────────────────────
+export const SOCIO = {
+  nombre: "Lic. Jorge Montes Carrillo", // TODO: nombre completo como aparecerá en la cédula
+  nombreCorto: "Lic. Jorge Montes",
+  cargo: "Socio fundador",
+  especialidad: "Abogado litigante en derecho laboral",
+  foto: "/despacho_jorge.png",
+  formacion: [
+    {
+      titulo: "Licenciatura en Derecho",
+      institucion: "Universidad UTEL",
+      detalle: "2026",
+    },
+    {
+      titulo: "Cédula profesional",
+      institucion: "Dirección General de Profesiones",
+      detalle: "En trámite",
+    },
+  ],
+  especializacion: [
+    {
+      titulo: "Diplomado sobre Juicio de Amparo",
+      institucion:
+        "Casas de los Saberes Jurídicos de la Suprema Corte de Justicia de la Nación",
+    },
+    {
+      titulo: "Diploma en Litigación Estratégica",
+      institucion: "Instituto de Educación Superior del Estado de México",
+    },
+    {
+      titulo: "Diploma en Juicio Civil y Mercantil con el nuevo CNPCF",
+      institucion: "Instituto de Educación Superior del Estado de México",
+    },
+  ],
+  idiomas: [
+    {
+      titulo: "Inglés — Nivel C1",
+      institucion: "TOEFL iBT: 110 pts (5.5 / 6.0), 2026",
+    },
+  ],
+  complementaria: [
+    {
+      titulo: "Diploma en Oratoria Pública",
+      institucion:
+        "Centro de Desarrollo Humano (antes Colegio Nacional de Penthatletas)",
+    },
+    {
+      titulo: "Diploma en Historia del Arte",
+      institucion: "Art for Introvert Institute",
+    },
+  ],
+};
+
+export const SOCIO_WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=52${WHATSAPP_DESPACHO}&text=${encodeURIComponent(
+  `Buen día, ${SOCIO.nombreCorto}. Me gustaría solicitar una consulta en materia laboral. Quedo atento(a) a su disponibilidad.`,
+)}`;
+export const SOCIO_CORREO_LINK = `mailto:${CORREO_DESPACHO}?subject=${encodeURIComponent(
+  "Solicitud de consulta en materia laboral",
+)}`;

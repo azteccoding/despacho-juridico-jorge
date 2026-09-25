@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { href: "/", label: "Inicio" },
   { href: "/servicios", label: "Áreas de práctica" },
   { href: "/servicios#laboral", label: "Derecho laboral" },
+  { href: "/socio-fundador", label: "Socio fundador" },
   { href: "/#contacto", label: "Contacto" },
 ];
 
@@ -35,7 +36,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`navbar navbar-dark navbar-expand-lg fixed-top ${styles.navbar} ${
+      className={`navbar navbar-dark navbar-expand-xl fixed-top ${styles.navbar} ${
         scrolled ? styles.scrolled : ""
       }`}
       aria-label="Principal"
@@ -72,8 +73,8 @@ export default function Navbar() {
               aria-label="Cerrar menú"
             ></button>
           </div>
-          <div className="offcanvas-body align-items-lg-center">
-            <ul className="navbar-nav ms-lg-auto me-lg-4 gap-lg-2">
+          <div className="offcanvas-body align-items-xl-center">
+            <ul className="navbar-nav ms-xl-auto me-xl-3 gap-xl-1">
               {NAV_LINKS.map(({ href, label }) => {
                 const isActive = pathname === href;
                 return (
@@ -91,7 +92,7 @@ export default function Navbar() {
               })}
             </ul>
             <a
-              className="btn btn-gold mt-4 mt-lg-0"
+              className={`btn btn-gold mt-4 mt-xl-0 text-nowrap ${styles.cta}`}
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"

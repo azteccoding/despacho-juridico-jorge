@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./servicios.module.css";
-import { AREAS_PRACTICA, WHATSAPP_LINK } from "@/constants/constants";
+import { AREAS_PRACTICA, SOCIO, WHATSAPP_LINK } from "@/constants/constants";
 
 export const metadata = {
   title: "Áreas de práctica",
@@ -72,14 +73,22 @@ export default function ServiciosPage() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  className="btn btn-ink mt-4"
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Consultar sobre {area.nombre.toLowerCase()}
-                </a>
+                <div className="d-flex flex-wrap align-items-center gap-4 mt-4">
+                  <a
+                    className="btn btn-ink"
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Consultar sobre {area.nombre.toLowerCase()}
+                  </a>
+                  {area.especialidad && (
+                    <Link className="link-arrow" href="/socio-fundador">
+                      Abogado responsable: {SOCIO.nombreCorto}{" "}
+                      <i className="fa-solid fa-arrow-right" aria-hidden="true" />
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           </div>

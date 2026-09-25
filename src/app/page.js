@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Specialty from "@/components/Specialty";
+import FounderTeaser from "@/components/FounderTeaser";
 import PracticeAreas from "@/components/PracticeAreas";
 import Process from "@/components/Process";
 import QuoteStrip from "@/components/QuoteStrip";
@@ -10,6 +11,7 @@ export default function Home() {
     <main>
       <Hero />
       <Specialty />
+      <FounderTeaser />
       <PracticeAreas />
       <Process />
       <QuoteStrip />
