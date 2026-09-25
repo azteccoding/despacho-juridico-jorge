@@ -15,10 +15,10 @@ export const SEO_DESCRIPCION_DESPACHO =
 // Contacto
 // TODO: confirmar estos datos. Provienen del sitio anterior.
 // ─────────────────────────────────────────────────────────────
-export const TELEFONO_DESPACHO = "4776935031";
-export const TELEFONO_VISIBLE = "477 693 5031";
-export const WHATSAPP_DESPACHO = "4776935031";
-export const CORREO_DESPACHO = "consultoriacaballero@outlook.com"; // TODO: correo de Plotinus
+export const TELEFONO_DESPACHO = "4770000111";
+export const TELEFONO_VISIBLE = "4770000111";
+export const WHATSAPP_DESPACHO = "4770000111";
+export const CORREO_DESPACHO = "contacto@cjplotinus.com"; // TODO: correo de Plotinus
 export const DIRECCION_DESPACHO =
   "Av. Paseo del Moral 707-563, Villas del Moral, 37160 León, Gto."; // TODO
 export const DIRECCION_IFRAME_MAPS =
@@ -32,13 +32,13 @@ export const INSTAGRAM_LINK = "";
 export const TIKTOK_LINK = "";
 
 export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=52${WHATSAPP_DESPACHO}&text=${encodeURIComponent(
-  "Hola, me gustaría agendar una consulta con Consultoría Jurídica Plotinus."
+  "Hola, me gustaría agendar una consulta con Consultoría Jurídica Plotinus.",
 )}`;
 export const TELEFONO_LINK = `tel:+52${TELEFONO_DESPACHO}`;
 
 export const HORARIO = [
-  { dias: "Lunes a viernes", horas: "9:00 – 19:00" },
-  { dias: "Sábado", horas: "9:00 – 14:00" },
+  { dias: "Lunes a viernes", horas: "9:00 – 17:00" },
+  { dias: "Sábado", horas: "Solo con cita" },
   { dias: "Domingo", horas: "Cerrado" },
 ];
 
