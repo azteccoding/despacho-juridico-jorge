@@ -1,0 +1,75 @@
+.media {
+  isolation: isolate;
+  position: relative;
+  aspect-ratio: 4 / 5;
+  margin: 0 1.5rem 1.5rem 0;
+}
+
+.media::before {
+  content: "";
+  position: absolute;
+  inset: 1.5rem -1.5rem -1.5rem 1.5rem;
+  border: 1px solid var(--gold);
+  z-index: -1;
+}
+
+.img {
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+}
+
+.badge {
+  position: absolute;
+  left: -1px;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.5rem;
+  background: var(--ink);
+  color: #fff;
+}
+
+.badgeLabel {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+.badgeValue {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.list li {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.5;
+}
+
+.list i {
+  flex: none;
+  font-size: 0.8rem;
+  color: var(--gold);
+}
+
+@media (max-width: 991.98px) {
+  .media {
+    aspect-ratio: 4 / 3;
+  }
+}

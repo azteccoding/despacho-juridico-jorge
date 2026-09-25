@@ -1,0 +1,123 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem 2.25rem;
+  background: var(--paper);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  z-index: 1;
+  box-shadow: var(--shadow-lg);
+}
+
+.featured {
+  background: var(--ink);
+  color: #e9edf3;
+}
+
+.tag {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold-soft);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 1.75rem;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.featured .icon {
+  border-color: var(--gold-soft);
+  color: var(--gold-soft);
+}
+
+.title {
+  margin-bottom: 0.85rem;
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+.summary {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.featured .summary {
+  color: rgba(233, 237, 243, 0.72);
+}
+
+.list {
+  flex: 1;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.list li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.featured .list li {
+  border-top-color: var(--line-light);
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+
+.featured .more {
+  color: var(--gold-soft);
+}
+
+@media (max-width: 1199.98px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 2rem 1.5rem;
+  }
+}

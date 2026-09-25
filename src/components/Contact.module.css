@@ -1,0 +1,91 @@
+.btnOutline {
+  --bs-btn-padding-x: 1.6rem;
+  --bs-btn-padding-y: 0.85rem;
+  --bs-btn-font-size: 0.8rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--ink);
+  --bs-btn-border-color: var(--ink);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--ink);
+  --bs-btn-hover-border-color: var(--ink);
+  letter-spacing: 0.14em;
+  border-radius: var(--radius);
+}
+
+.details {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.details > div {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.details dt {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-top: 0.2rem;
+}
+
+.details dd {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.details a {
+  color: var(--text);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.details a:hover {
+  color: var(--gold);
+}
+
+.hours {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 18rem;
+}
+
+.hours li span:last-child {
+  color: var(--muted);
+}
+
+.map {
+  position: relative;
+  height: 100%;
+  min-height: 380px;
+  background: var(--ivory-2);
+  box-shadow: var(--shadow-sm);
+}
+
+.map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.6) contrast(1.05);
+}
+
+@media (max-width: 575.98px) {
+  .details > div {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}

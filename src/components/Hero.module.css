@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: calc(100svh - var(--navbar-height));
+  max-height: 900px;
+  color: #fff;
+  background: var(--ink);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.bg {
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: -2;
+  filter: grayscale(0.35);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+      90deg,
+      rgba(13, 26, 43, 0.96) 0%,
+      rgba(13, 26, 43, 0.86) 45%,
+      rgba(13, 26, 43, 0.45) 100%
+    ),
+    linear-gradient(0deg, rgba(13, 26, 43, 0.9) 0%, rgba(13, 26, 43, 0) 40%);
+}
+
+.content {
+  padding-block: clamp(4rem, 12vh, 8rem) clamp(3rem, 8vh, 5rem);
+}
+
+.title {
+  max-width: 15ch;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.75rem, 6.4vw, 5.25rem);
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.lead {
+  max-width: 36rem;
+  margin-bottom: 2.5rem;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.lead strong {
+  font-weight: 600;
+  color: var(--gold-soft);
+}
+
+/* Barra inferior con las cuatro áreas */
+.areasBar {
+  border-top: 1px solid var(--line-light);
+  background: rgba(13, 26, 43, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+.areas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.areas li + li {
+  border-left: 1px solid var(--line-light);
+}
+
+.areas a {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.35rem 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.areas li:first-child a {
+  padding-left: 0;
+}
+
+.areas i {
+  color: var(--gold-soft);
+  font-size: 1rem;
+}
+
+.areas a:hover {
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .areas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .areas li:nth-child(3) {
+    border-left: 0;
+  }
+
+  .areas li:nth-child(n + 3) {
+    border-top: 1px solid var(--line-light);
+  }
+
+  .areas li:nth-child(odd) a {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .areas a {
+    padding: 1rem 0.75rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+}

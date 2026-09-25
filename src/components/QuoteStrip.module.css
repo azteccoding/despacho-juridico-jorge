@@ -1,0 +1,47 @@
+.wrap {
+  background: var(--paper);
+}
+
+.figure {
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mark {
+  display: block;
+  height: 3.5rem;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.quote p {
+  margin: 0 0 1.75rem;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.author {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.author::before,
+.author::after {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: var(--gold);
+}
