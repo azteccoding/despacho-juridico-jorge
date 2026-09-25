@@ -17,7 +17,7 @@ export const SEO_DESCRIPCION_DESPACHO =
 // ─────────────────────────────────────────────────────────────
 export const TELEFONO_DESPACHO = "4770000111";
 export const TELEFONO_VISIBLE = "477 000 1111";
-export const WHATSAPP_DESPACHO = "4776935031";
+export const WHATSAPP_DESPACHO = "4770000111";
 export const CORREO_DESPACHO = "contacto@cjplotinus.com"; // TODO: correo de Plotinus
 export const DIRECCION_DESPACHO =
   "Av. Paseo del Moral 707-563, Villas del Moral, 37160 León, Gto."; // TODO
@@ -37,8 +37,8 @@ export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=52${WHATSAPP_D
 export const TELEFONO_LINK = `tel:+52${TELEFONO_DESPACHO}`;
 
 export const HORARIO = [
-  { dias: "Lunes a viernes", horas: "9:00 – 19:00" },
-  { dias: "Sábado", horas: "9:00 – 14:00" },
+  { dias: "Lunes a viernes", horas: "9:00 - 17:00" },
+  { dias: "Sábado", horas: "Solo con cita" },
   { dias: "Domingo", horas: "Cerrado" },
 ];
 
