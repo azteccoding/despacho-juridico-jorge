@@ -15,10 +15,10 @@ export const SEO_DESCRIPCION_DESPACHO =
 // Contacto
 // TODO: confirmar estos datos. Provienen del sitio anterior.
 // ─────────────────────────────────────────────────────────────
-export const TELEFONO_DESPACHO = "4776935031";
-export const TELEFONO_VISIBLE = "477 693 5031";
+export const TELEFONO_DESPACHO = "4770000111";
+export const TELEFONO_VISIBLE = "477 000 1111";
 export const WHATSAPP_DESPACHO = "4776935031";
-export const CORREO_DESPACHO = "consultoriacaballero@outlook.com"; // TODO: correo de Plotinus
+export const CORREO_DESPACHO = "contacto@cjplotinus.com"; // TODO: correo de Plotinus
 export const DIRECCION_DESPACHO =
   "Av. Paseo del Moral 707-563, Villas del Moral, 37160 León, Gto."; // TODO
 export const DIRECCION_IFRAME_MAPS =
