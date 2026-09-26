@@ -74,7 +74,7 @@ export default function Calculadora() {
   const [vacDisfrutadasPeriodo, setVacDisfrutadasPeriodo] = useState("0");
   const [diasAguinaldo, setDiasAguinaldo] = useState("15");
   const [primaVacacionalPct, setPrimaVacacionalPct] = useState("25");
-  const [incluir20Dias, setIncluir20Dias] = useState(true);
+  const [incluir20Dias, setIncluir20Dias] = useState(false);
   const [mesesSalariosVencidos, setMesesSalariosVencidos] = useState("0");
 
   // Por defecto la fecha de terminación es hoy. Se lee sólo en el navegador
@@ -478,10 +478,10 @@ export default function Calculadora() {
                   />
                   Incluir 20 días de salario por año de servicio
                   <InfoTip articulo="Art. 50 fr. II, arts. 49 y 52 LFT">
-                    En estricto derecho procede cuando el patrón se niega a
-                    reinstalarte (art. 49) o cuando tú rescindes la relación por
-                    causa imputable al patrón (arts. 51 y 52). En la práctica
-                    suele pedirse y negociarse en la conciliación.
+                    Procede después de ganar el juicio laboral y el patrón se
+                    niega a reinstalarte (art. 49) o cuando tú rescindes la
+                    relación por causa imputable al patrón (arts. 51 y 52). En
+                    la práctica suele negociarse en la conciliación.
                   </InfoTip>
                 </label>
               </div>

@@ -59,7 +59,9 @@ export default function ServiciosPage() {
 
               <div className={`col-lg-7 ${i % 2 ? "pe-lg-5" : "ps-lg-5"}`}>
                 <p className="eyebrow">
-                  {area.especialidad ? "Nuestra especialidad" : `Área ${String(i + 1).padStart(2, "0")}`}
+                  {area.especialidad
+                    ? "Nuestra especialidad"
+                    : `Área ${String(i + 1).padStart(2, "0")}`}
                 </p>
                 <h2 id={`${area.slug}-titulo`} className="section-title">
                   {area.nombre}
@@ -82,10 +84,24 @@ export default function ServiciosPage() {
                   >
                     Consultar sobre {area.nombre.toLowerCase()}
                   </a>
+                  {area.slug === "laboral" ? (
+                    <Link className="link-arrow" href="/calculadora-finiquito">
+                      Calcula tu finiquito o liquidación{" "}
+                      <i
+                        className="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                      />
+                    </Link>
+                  ) : (
+                    ""
+                  )}
                   {area.especialidad && (
                     <Link className="link-arrow" href="/socio-fundador">
                       Abogado responsable: {SOCIO.nombreCorto}{" "}
-                      <i className="fa-solid fa-arrow-right" aria-hidden="true" />
+                      <i
+                        className="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                      />
                     </Link>
                   )}
                 </div>
