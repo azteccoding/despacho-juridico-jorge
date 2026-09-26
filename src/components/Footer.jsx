@@ -44,7 +44,7 @@ export default function Footer() {
 
       <div className="container">
         <div className={`row g-4 g-lg-5 ${styles.main}`}>
-          <div className="col-lg-4">
+          <div className="col-lg-3">
             <Brand />
             <p className={styles.about}>{DESCRIPCION_GENERAL}</p>
             <ul className={styles.social}>
@@ -58,7 +58,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-sm-6 col-lg-4">
+          <div className="col-sm-6 col-lg-3">
             <h2 className={styles.heading}>Áreas de práctica</h2>
             <ul className={styles.links}>
               {AREAS_PRACTICA.map((area) => (
@@ -69,7 +69,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-sm-6 col-lg-4">
+          <div className="col-sm-6 col-lg-3">
+            <h2 className={styles.heading}>Herramientas</h2>
+            <ul className={styles.links}>
+              <li>
+                <Link href="/calculadora-finiquito">Calculadora de finiquito y liquidación</Link>
+              </li>
+              <li>
+                <Link href="/causas-despido-justificado">Causas de despido justificado</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-sm-6 col-lg-3">
             <h2 className={styles.heading}>Contacto</h2>
             <ul className={styles.links}>
               <li>

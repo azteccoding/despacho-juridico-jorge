@@ -10,7 +10,7 @@ import { WHATSAPP_LINK } from "@/constants/constants";
 const NAV_LINKS = [
   { href: "/", label: "Inicio" },
   { href: "/servicios", label: "Áreas de práctica" },
-  { href: "/servicios#laboral", label: "Derecho laboral" },
+  { href: "/calculadora-finiquito", label: "Calculadora de finiquito" },
   { href: "/socio-fundador", label: "Socio fundador" },
   { href: "/#contacto", label: "Contacto" },
 ];

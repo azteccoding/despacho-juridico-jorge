@@ -56,6 +56,10 @@ export default function Specialty() {
               >
                 Consulta tu caso laboral
               </a>
+              <Link className="link-arrow" href="/calculadora-finiquito">
+                Calcula tu finiquito o liquidación{" "}
+                <i className="fa-solid fa-arrow-right" aria-hidden="true" />
+              </Link>
               <Link className="link-arrow" href="/socio-fundador">
                 Conoce al abogado responsable{" "}
                 <i className="fa-solid fa-arrow-right" aria-hidden="true" />

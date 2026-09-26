@@ -10,6 +10,7 @@ import {
   NOMBRE_DESPACHO,
   NOMBRE_CORTO,
   SEO_DESCRIPCION_DESPACHO,
+  SITIO_URL,
 } from "@/constants/constants";
 
 // Fuentes autoalojadas por next/font (sin peticiones a Google en el navegador).
@@ -28,6 +29,7 @@ const sans = Inter({
 });
 
 export const metadata = {
+  metadataBase: new URL(SITIO_URL),
   title: {
     default: `${NOMBRE_DESPACHO} | Abogados laborales, familiares y de amparo`,
     template: `%s | ${NOMBRE_CORTO}`,
@@ -51,7 +53,7 @@ export default function RootLayout({ children }) {
     // Bootstrap activa scroll-behavior: smooth; este atributo hace que
     // Next lo desactive al cambiar de ruta (comportamiento de Next 16).
     <html
-      lang="es"
+      lang="es-MX"
       data-scroll-behavior="smooth"
       className={`${serif.variable} ${sans.variable}`}
     >

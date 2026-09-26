@@ -1,0 +1,485 @@
+/* Usa los tokens del sitio definidos en globals.css (--ink, --gold, --ivory…) */
+.pagina {
+  --azul: var(--ink-3);
+  --azul-oscuro: var(--ink);
+  --dorado: var(--gold);
+  --dorado-claro: #faf5ea;
+  --texto: var(--text);
+  --suave: var(--muted);
+  --borde: #dcd6ca;
+  --fondo: var(--ivory);
+  --rojo: #b3261e;
+
+  color: var(--texto);
+  background: var(--fondo);
+  padding-bottom: 4rem;
+}
+
+/* ── Encabezado llamativo ── */
+.hero {
+  background: var(--azul-oscuro);
+  color: #fff;
+  padding: 3.5rem 1rem 4.5rem;
+  text-align: center;
+}
+
+.gancho {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: var(--dorado);
+  color: var(--azul-oscuro);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.titulo {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: clamp(2rem, 4.6vw, 3.3rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.subtitulo {
+  max-width: 680px;
+  margin: 1rem auto 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.chips li {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* ── Calculadora ── */
+.calculadora {
+  max-width: 980px;
+  margin: -2.5rem auto 0;
+  padding: 1.75rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.seccionTitulo {
+  margin: 0 0 1.25rem;
+  font-size: 1.9rem;
+  color: var(--azul);
+}
+
+.formulario {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.grupo {
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 1rem 1.1rem 1.2rem;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Bootstrap pone float y width: 100% a las leyendas; aquí se restablecen */
+.grupo legend {
+  float: none;
+  width: auto;
+  margin: 0;
+  padding: 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.fila3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo > label,
+.etiqueta {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.campo input[type="number"],
+.campo select,
+.fecha {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: var(--texto);
+  font-family: inherit;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: 2px solid var(--azul);
+  outline-offset: 1px;
+  border-color: var(--azul);
+}
+
+.fecha {
+  cursor: pointer;
+}
+
+.moneda {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding-left: 0.7rem;
+  background: #fff;
+}
+
+.moneda:focus-within {
+  outline: 2px solid var(--azul);
+  outline-offset: 1px;
+}
+
+.moneda span {
+  color: var(--suave);
+  font-weight: 600;
+}
+
+.moneda input[type="number"] {
+  border: none;
+  outline: none;
+}
+
+.moneda input:focus {
+  outline: none;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.opcion,
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.opcionesDespido {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.tarjeta {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.9rem 1rem;
+  border: 2px solid var(--borde);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.tarjeta input {
+  margin-top: 0.2rem;
+}
+
+.tarjeta small {
+  display: block;
+  margin-top: 0.35rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.tarjeta small a {
+  color: var(--azul);
+}
+
+.activa {
+  border-color: var(--azul);
+  background: #eef3fa;
+}
+
+.banner {
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--dorado);
+  background: var(--dorado-claro);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.alerta {
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--rojo);
+  background: #fdecea;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Resultados ── */
+.resultados {
+  margin-top: 2rem;
+}
+
+.vacio {
+  text-align: center;
+  color: var(--suave);
+  padding: 1.5rem;
+  border: 1px dashed var(--borde);
+  border-radius: 10px;
+}
+
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.tarjetaTotal {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.tarjetaTotal span {
+  font-size: 0.85rem;
+  color: var(--suave);
+}
+
+.tarjetaTotal strong {
+  font-size: 1.45rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.destacada {
+  background: var(--azul);
+  border-color: var(--azul);
+}
+
+.destacada span {
+  color: #cfd9e8;
+}
+
+.destacada strong {
+  color: #fff;
+}
+
+.datosClave {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--suave);
+  line-height: 1.6;
+}
+
+.tablaWrap {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.tabla caption {
+  caption-side: top; /* Bootstrap la manda abajo */
+  text-align: left;
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 600;
+  font-size: 1.45rem;
+  color: var(--azul);
+  padding: 0 0 0.5rem;
+}
+
+.tabla th,
+.tabla td {
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--borde);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabla thead th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--suave);
+  white-space: nowrap;
+}
+
+.tabla th:first-child,
+.tabla td:first-child {
+  text-align: left;
+}
+
+.tabla tbody th {
+  font-weight: 600;
+}
+
+.tabla tfoot th,
+.tabla tfoot td {
+  font-weight: 700;
+  border-bottom: none;
+}
+
+.fundamento {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #8a6a36;
+}
+
+.tablaISR td {
+  text-align: right;
+}
+
+.detalle {
+  margin-top: 1.75rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: #fafbfd;
+}
+
+.detalle summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.detalle ul {
+  line-height: 1.6;
+  font-size: 0.9rem;
+  padding-left: 1.2rem;
+}
+
+.nota {
+  font-size: 0.82rem;
+  color: var(--suave);
+  margin-top: 1rem;
+}
+
+/* ── Texto explicativo ── */
+.explicacion {
+  max-width: 820px;
+  margin: 2.5rem auto 0;
+  padding: 0 1rem;
+  line-height: 1.65;
+}
+
+.explicacion h2 {
+  color: var(--azul);
+}
+
+.ctaDespacho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin: 2rem 0 1.5rem;
+  padding: 1.5rem;
+  background: var(--azul-oscuro);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius);
+}
+
+.ctaDespacho p {
+  margin: 0;
+  flex: 1 1 320px;
+}
+
+.ctaDespacho strong {
+  color: #fff;
+}
+
+.aviso {
+  font-size: 0.88rem;
+  color: var(--suave);
+  border-top: 1px solid var(--borde);
+  padding-top: 1rem;
+}
+
+/* ── Móvil: la tabla de conceptos se vuelve tarjetas ── */
+@media (max-width: 640px) {
+  .calculadora {
+    margin: -2rem 0.75rem 0;
+    padding: 1.1rem;
+  }
+
+  .tabla:not(.tablaISR) thead {
+    display: none;
+  }
+
+  .tabla:not(.tablaISR) tr {
+    display: block;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .tabla:not(.tablaISR) th,
+  .tabla:not(.tablaISR) td {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    padding: 0.2rem 0;
+  }
+
+  .tabla:not(.tablaISR) td::before {
+    content: attr(data-label);
+    color: var(--suave);
+    font-size: 0.82rem;
+  }
+
+  .tabla:not(.tablaISR) tbody th,
+  .tabla:not(.tablaISR) tfoot th {
+    display: block;
+  }
+}
