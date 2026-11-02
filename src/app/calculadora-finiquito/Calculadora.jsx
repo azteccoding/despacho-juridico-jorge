@@ -140,6 +140,16 @@ export default function Calculadora() {
         Calcula lo que te corresponde
       </h2>
 
+      <p className={styles.privacidad}>
+        <i className="fa-solid fa-lock" aria-hidden="true" />
+        <span>
+          <strong>Tus datos son solo tuyos.</strong> El cálculo se hace
+          completamente en tu navegador: lo que escribes (salario, fechas,
+          prestaciones) nunca se envía a nuestros servidores, no lo guardamos
+          ni lo vemos, y se borra en cuanto cierras o recargas la página.
+        </span>
+      </p>
+
       <form
         className={styles.formulario}
         onSubmit={(e) => e.preventDefault()}

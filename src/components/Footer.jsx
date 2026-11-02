@@ -103,7 +103,8 @@ export default function Footer() {
           </span>
           <span>
             La información de este sitio es orientativa y no sustituye una asesoría
-            jurídica personalizada.
+            jurídica personalizada. Este sitio no recaba datos personales: no
+            tiene formularios, cookies propias ni herramientas de analítica.
           </span>
         </div>
       </div>

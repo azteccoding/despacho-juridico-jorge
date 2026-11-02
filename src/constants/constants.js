@@ -9,7 +9,7 @@ export const ESLOGAN = "Defendemos tu trabajo, tu familia y tu patrimonio.";
 export const DESCRIPCION_GENERAL =
   "Despacho especializado en derecho laboral, derecho familiar, amparo y derecho civil y mercantil. Acompañamos a personas y familias con estrategia, rigor técnico y trato cercano.";
 // Dominio público del sitio: se usa en metadataBase, sitemap y robots.
-export const SITIO_URL = "https://cjplotinus.com"; // TODO: confirmar dominio definitivo
+export const SITIO_URL = "https://plotinus.com.mx"; // plotinus.mx debe redirigir aquí
 
 export const SEO_DESCRIPCION_DESPACHO =
   "Consultoría Jurídica Plotinus: abogados especialistas en derecho laboral, familiar, amparo, civil y mercantil. Agenda tu consulta.";
